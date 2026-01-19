@@ -10,11 +10,54 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: {
-                            50: '#eff6ff',
-                            500: '#3b82f6',
+                        primary: {  // Your forest green scale (unchanged – great for civic trust)
+                            50:  '#e8f5e9',
+                            100: '#c8e6c9',
+                            200: '#a5d6a7',
+                            300: '#81c784',
+                            400: '#66bb6a',
+                            500: '#4caf50',  // Main accents
+                            600: '#43a047',
+                            700: '#2e7d32',
+                            800: '#1b5e20',
+                            900: '#003D1E',  // Dark headers/nav
+                        },
+                        secondary: {  // Navy blue scale (from flag/site bgs – for stability)
+                            50:  '#eff6ff',   // Light tints for cards/hovers
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',   // Mid-blue accents
                             600: '#2563eb',
                             700: '#1d4ed8',
+                            800: '#1e40af',   // Darker for footers
+                            900: '#0F47AF',   // Base navy (headers, hero bgs)
+                        },
+                        accent: {  // Yellow-gold scale (your #FFCA0A for buttons – energetic CTAs)
+                            50:  '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#FFCA0A',   // ← Your button color (main CTAs, highlights)
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',   // Darker shades for pressed states
+                        },
+                        neutral: {  // Basics for text/backgrounds (white/gray for contrast)
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827',
+                            white: '#FFFFFF',  // Clean text on dark bgs
                         }
                     }
                 }
@@ -80,170 +123,7 @@
         </div>
     </section>
 
-    <!-- User Interface Section -->
-    <section id="user-interface" class="py-16 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">User Interface Screens</h2>
-            
-            <!-- User Interface Screenshots -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Landing Page</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/user-facing/01_landing_page.png" 
-                             alt="Landing Page" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">Main entry point for citizens accessing the platform</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/user-facing/01_landing_page.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                        <span class="text-gray-400">•</span>
-                        <a href="screenshots/mobile/01_landing_page_mobile.png" class="text-primary-600 hover:text-primary-700 text-sm font-medium">Mobile View</a>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Submission Form</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/user-facing/05_submission_form.png" 
-                             alt="Submission Form" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">Form for citizens to submit their feedback and ideas</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/user-facing/05_submission_form.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Community Ideas</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/user-facing/02_community_ideas.png" 
-                             alt="Community Ideas" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">Browse and vote on community-submitted ideas</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/user-facing/02_community_ideas.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                        <span class="text-gray-400">•</span>
-                        <a href="screenshots/mobile/02_community_ideas_mobile.png" class="text-primary-600 hover:text-primary-700 text-sm font-medium">Mobile View</a>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Planning Documents</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/user-facing/06_planning_documents.png" 
-                             alt="Planning Documents" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">View and access official planning documents</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/user-facing/06_planning_documents.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Login Page</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/user-facing/03_login_page.png" 
-                             alt="Login Page" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">Secure authentication interface for users</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/user-facing/03_login_page.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Sign Up Page</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/user-facing/04_signup_page.png" 
-                             alt="Sign Up Page" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">New user registration form</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/user-facing/04_signup_page.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Admin Dashboard Section -->
-    <section id="admin-dashboard" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">Admin Dashboard</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Admin Landing</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/admin-dashboard/01_admin_landing.png" 
-                             alt="Admin Landing" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">Main administrative interface overview</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/admin-dashboard/01_admin_landing.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                        <span class="text-gray-400">•</span>
-                        <a href="screenshots/mobile/03_admin_landing_mobile.png" class="text-primary-600 hover:text-primary-700 text-sm font-medium">Mobile View</a>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Submissions Management</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/admin-dashboard/03_submissions_management.png" 
-                             alt="Submissions Management" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">Review and manage citizen submissions</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/admin-dashboard/03_submissions_management.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Admin Dashboard</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/admin-dashboard/02_dashboard.png" 
-                             alt="Admin Dashboard" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">Comprehensive dashboard with analytics and metrics</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/admin-dashboard/02_dashboard.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">User Management</h3>
-                    <div class="relative group cursor-pointer">
-                        <img src="screenshots/admin-dashboard/04_users_management.png" 
-                             alt="User Management" 
-                             class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg"></div>
-                    </div>
-                    <p class="text-gray-600 mt-4">Manage users and administrative permissions</p>
-                    <div class="mt-2 flex space-x-2">
-                        <button onclick="openModal('screenshots/admin-dashboard/04_users_management.png')" class="text-primary-600 hover:text-primary-700 text-sm font-medium">View Full Size</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Features Section -->
     <section id="features" class="py-16 bg-gray-100">
